@@ -359,7 +359,22 @@ button:focus-visible {
 .post-content h3 { margin-top: 1.65em; margin-bottom: .6em; font-size: 22px; line-height: 1.25; }
 .post-content h4 { margin-top: 1.5em; margin-bottom: .55em; font-size: 18px; line-height: 1.3; }
 .post-content p { margin: 1em 0; }
-.post-content li { margin: .42em 0; }
+.post-content ul,
+.post-content ol {
+  margin: 1.05em 0 1.2em;
+  list-style-position: outside;
+}
+.post-content ul { padding-inline-start: 1.75em; }
+.post-content ol { padding-inline-start: 2.15em; }
+.post-content li { margin: .5em 0; padding-inline-start: .35em; }
+.post-content li::marker {
+  color: var(--journal-accent);
+  font-family: var(--journal-display);
+  font-weight: 700;
+}
+.post-content li > p { margin: .35em 0; }
+.post-content li > ul,
+.post-content li > ol { margin: .45em 0 .65em; }
 .post-content strong { font-weight: 650; }
 .post-content a { color: var(--journal-accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .post-content hr { margin: 28px 0; border-color: var(--journal-line); }
